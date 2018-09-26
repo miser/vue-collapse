@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+  <header>
+    <link rel="stylesheet" type="text/css" href="../dist/index.css">
+  </header>
+  <body>
+    <div id="app">
+      <vue-collapse :initCount="initCount" :list="list">
+        <template slot-scope="item">
+          {{ item.name }}
+        </template>
+      </vue-collapse>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="../dist/index.js"></script>
+    <script type="text/javascript">
+      var app = new Vue({
+        data: function () {
+          return {
+            list: [{
+              name: 'miser1'
+            },{
+              name: 'miser2'
+            },{
+              name: 'miser3'
+            },{
+              name: 'miser4'
+            },{
+              name: 'miser5'
+            },{
+              name: 'miser6'
+            },{
+              name: 'miser7'
+            }],
+            initCount: 5
+          }
+        },
+        components: {
+          VueCollapse
+        },
+        el: '#app'
+      })
+    </script>
+  </body>
+</html>
