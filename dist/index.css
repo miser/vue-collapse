@@ -1,0 +1,32 @@
+.wrap-collabsible input[type='checkbox'] {
+  display: none; }
+
+.wrap-collabsible .lbl-toggle {
+  display: block;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #40a9ff; }
+  .wrap-collabsible .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: 10px;
+    transform: translateY(-2px);
+    transition: transform 0.25s ease-out; }
+
+.wrap-collabsible .collapsible-content {
+  height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out; }
+
+.wrap-collabsible .toggle:checked + .collapsible-content {
+  height: auto; }
+
+.wrap-collabsible .toggle:checked ~ .lbl-toggle::before {
+  transform: rotate(-90deg); }
