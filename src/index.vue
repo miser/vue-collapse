@@ -41,13 +41,13 @@
 <template>
 	<div class="wrap-collabsible">
     <div v-for="(item, index) in displayList" class="init-item" :key="index">
-      <slot v-bind="item"></slot>
+      <slot :item="item" :index="index"></slot>
     </div>
     <input :id="id" class="toggle" type="checkbox" v-model="checked" />
     <div class="collapsible-content">
       <div class="content-inner">
           <div v-for="(item, index) in moreList" class="more-item" :key="index">
-            <slot v-bind="item"></slot>
+            <slot :item="item" :index="index"></slot>
           </div>
       </div>
     </div>

@@ -2,14 +2,43 @@
 <html>
   <header>
     <link rel="stylesheet" type="text/css" href="../dist/index.css">
+    <style type="text/css">
+      #app {
+        margin: 0 auto;
+        width: 600px;
+      }
+      #app .header {
+        padding: 20px;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 22px;
+        background-color: #A93226;
+      }
+      #app .item {
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #34495E;
+      }
+      #app .item span {
+        display: inline-block;
+        margin-right: 8px;
+        width: 15px;
+        height: 10px;
+      }
+    </style>
   </header>
   <body>
     <div id="app">
-      <vue-collapse :initCount="initCount" :list="list">
-        <template slot-scope="item">
-          {{ item.name }}
-        </template>
-      </vue-collapse>
+      <div>
+        <div class="header">Color</div>
+        <vue-collapse :initCount="initCount" :list="list">
+          <template slot-scope="{item, index}">
+            <div class="item">
+              <span :style="{ background: item.hex }"></span>{{ item.name }}
+            </div>
+          </template>
+        </vue-collapse>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script type="text/javascript" src="../dist/index.js"></script>
@@ -17,21 +46,19 @@
       var app = new Vue({
         data: function () {
           return {
-            list: [{
-              name: 'miser1'
-            },{
-              name: 'miser2'
-            },{
-              name: 'miser3'
-            },{
-              name: 'miser4'
-            },{
-              name: 'miser5'
-            },{
-              name: 'miser6'
-            },{
-              name: 'miser7'
-            }],
+            list: [
+              { name: 'Yellow', hex: '#FFFF00'},
+              { name: 'CORAL', hex: '#FF7F50'},
+              { name: 'TOMATO', hex: '#FF6347'},
+              { name: 'BLACK', hex: '#000000'},
+              { name: 'BLUE', hex: '#0000FF'},
+              { name: 'PINK', hex: '#FFC0CB'},
+              { name: 'GREEN', hex: '#008000'},
+              { name: 'WHITE', hex: '#FFFFFF'},
+              { name: 'RED', hex: '#CD5C5C'},
+              { name: 'SNOW', hex: '#FFFAFA'},
+              { name: 'INDIGO', hex: '#4B0082'}
+            ],
             initCount: 5
           }
         },
