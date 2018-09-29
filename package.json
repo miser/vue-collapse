@@ -1,6 +1,6 @@
 {
-  "name": "vue-collapse",
-  "version": "0.0.1",
+  "name": "vue-simple-collapse",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
