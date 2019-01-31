@@ -23,7 +23,7 @@ Use
 </template>
 <script>
 require('vue-simple-collapse/dist/index.css')
-import VueCollapse from 'vue-simple-collapse/dist'
+import VueCollapse from 'vue-simple-collapse'
 
 export default {
   components: {
