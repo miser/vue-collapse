@@ -31,5 +31,12 @@
   },
   "dependencies": {
     "vue": "^2.5.17"
-  }
+  },
+  "keywords": [
+    "vue",
+    "vue2",
+    "vue-component",
+    "vue.js",
+    "collapsed"
+  ]
 }
